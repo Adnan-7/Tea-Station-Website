@@ -113,6 +113,13 @@ p {
   background: var(--clr-primary-light);
 }
 
+.clearfix::after,
+.clearfix::before {
+  content: '';
+  clear: both;
+  display: table;
+}
+
 /*
 =========== 
 header
@@ -165,4 +172,55 @@ header
     #e9b949,
     var(--clr-primary)
   );
+}
+
+/*
+=========== 
+header
+===========
+ */
+.skills {
+  background: var(--clr-grey-10);
+}
+
+.skill {
+  padding: 2.5rem 0;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  transition: var(--transition);
+  color: var(--clr-primary);
+}
+
+.skill-text {
+  max-width: 17rem;
+  margin: 0 auto;
+  color: var(--clr-grey-5);
+}
+
+.skill:hover {
+  background: var(--clr-white);
+  box-shadow: 0 3px var(--clr-primary);
+}
+
+.skill:hover .skill-icon {
+  transform: translateY(-5px);
+}
+
+@media screen and (min-width: 576px) {
+  .skill {
+    float: left;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .skill {
+    width: 25%;
+  }
 }
